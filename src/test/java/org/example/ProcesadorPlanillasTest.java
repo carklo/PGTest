@@ -45,19 +45,19 @@ class ProcesadorPlanillasTest {
     }
 
     @Test
-    void calcularPlanillaCase2Test() {
+    void calcularPlanillaCase2IdZeroTest() {
         when(proveedorMiembrosPlanilla.obtenerEmpleadosPlanilla()).thenReturn(empleadosCase2);
         Assertions.assertEquals(13f, procesadorPlanillas.calcularPlanilla());
     }
 
     @Test
-    void calcularPlanillaCase3Test() {
+    void calcularPlanillaCase3NombreVacioTest() {
         when(proveedorMiembrosPlanilla.obtenerEmpleadosPlanilla()).thenReturn(empleadosCase3);
         Assertions.assertEquals(13f, procesadorPlanillas.calcularPlanilla());
     }
 
     @Test
-    void calcularPlanillaCase4Test() {
+    void calcularPlanillaCase4MontoMensualNegativoTest() {
         when(proveedorMiembrosPlanilla.obtenerEmpleadosPlanilla()).thenReturn(empleadosCase4);
         Assertions.assertEquals(13f, procesadorPlanillas.calcularPlanilla());
     }
